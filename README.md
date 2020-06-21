@@ -28,10 +28,10 @@ The following technologies are used developing this web application:
 13. Model Building(LogisticRegression)
 14. Deploy Model in Heroku using Flask
 
-##Screenshot
+## Screenshot
 ![Spam Message Detector App Screenshot](https://raw.githubusercontent.com/TechyNilesh/Spam-Message-Detector-App/master/screenshot.png "Spam Message Detector App Screenshot")
 
-##Live WebApp Link'
+## Live WebApp Link'
 https://spam-message-detector-app.herokuapp.com/
 
 
