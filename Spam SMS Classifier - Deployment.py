@@ -5,7 +5,7 @@ import pickle
 # Loading the dataset
 df = pd.read_csv('Spam SMS Collection', sep='\t', names=['label', 'message'])
 
-# Importing essential libraries for performing Natural Language Processing on 'SMS Spam Collection' dataset
+# Importing essential libraries for performing Natural Language Processing on 'Spam Collection' dataset
 import nltk
 import re
 nltk.download('stopwords')
@@ -39,7 +39,7 @@ for i in range(0,df.shape[0]):
   # Building a corpus of messages
   corpus.append(message)
   
-# Creating the Bag of Words model
+# Creating the TF-IDF model
 from sklearn.feature_extraction.text import TfidfVectorizer
 tf = TfidfVectorizer(max_features=2500)
 X = tf.fit_transform(corpus).toarray()
@@ -48,7 +48,7 @@ X = tf.fit_transform(corpus).toarray()
 y = pd.get_dummies(df['label'])
 y = y.iloc[:, 1].values
 
-# Creating a pickle file for the CountVectorizer
+# Creating a pickle file for the TfidfVectorizer
 pickle.dump(tf, open('tf-transform.pkl', 'wb'))
 
 # Model Building
@@ -56,11 +56,11 @@ pickle.dump(tf, open('tf-transform.pkl', 'wb'))
 from sklearn.model_selection import train_test_split
 X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.20, random_state=0)
 
-# Fitting Naive Bayes to the Training set
+# Fitting Logistic Regression to the Training set
 from sklearn.linear_model import LogisticRegression
 classifier = LogisticRegression(C=1e5)
 classifier.fit(X_train, y_train)
 
-# Creating a pickle file for the Multinomial Naive Bayes model
+# Creating a pickle file for the Logistic Regression model
 filename = 'spam-msg-lr-model.pkl'
 pickle.dump(classifier, open(filename, 'wb'))
