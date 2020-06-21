@@ -2,7 +2,7 @@
 from flask import Flask, render_template, request
 import pickle
 
-# Load the Multinomial Naive Bayes model and CountVectorizer object from disk
+# Load the LogisticRegression model and Tfidfvectorizetion object from disk
 filename = 'spam-msg-lr-model.pkl'
 classifier = pickle.load(open(filename, 'rb'))
 tf = pickle.load(open('tf-transform.pkl', 'rb'))
