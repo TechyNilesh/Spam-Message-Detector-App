@@ -1,6 +1,6 @@
 # Spam Message Detector App
 
-![Kaggle](https://img.shields.io/badge/Dataset-Kaggle-lightblue.svg) ![Python 3.6](https://img.shields.io/badge/Python-3.6-brightgreen.svg) ![NLTK](https://img.shields.io/badge/Library-NLTK-blue.svg) ![scikit-learn](https://img.shields.io/badge/Library-sklearn-orange.svg)  ![Pandas](https://img.shields.io/badge/Library-Pandas-darkblue.svg) ![Platform](https://img.shields.io/badge/Platform-Heroku Cloud-purple.svg)
+![Kaggle](https://img.shields.io/badge/Dataset-Kaggle-lightblue.svg) ![Python 3.6](https://img.shields.io/badge/Python-3.6-brightgreen.svg) ![NLTK](https://img.shields.io/badge/Library-NLTK-blue.svg) ![scikit-learn](https://img.shields.io/badge/Library-sklearn-orange.svg)  ![Pandas](https://img.shields.io/badge/Library-Pandas-darkblue.svg) ![Platform](https://img.shields.io/badge/Platform-Heroku_Cloud-purple.svg)
 
 This is an AI-based spam classification system developed using Flask and deployment at Heroku Cloud.
 
